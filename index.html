@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
 	<body>
-		<div ng-app="">
-			<p>Input something in the input box:</p>
-			<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-			<h1>Hello {{name}}</h1>
+		<div ng-app="myApp" ng-controller="myController">
+			<p>First Name<input type="text" ng-model="firstName" placeholder="First Name"></p>
+			<p>Last Name<input type="text" ng-model="lastName" placeholder="Last Name"></p>
+			<p>Email Address<input type="text" ng-model="emailAddress" placeholder="Email Address"></p>
+			<p>Notes<input type="text" ng-model="notes"></p>
+			<button ng-click="register()">Register</button>
+			<p>{{message}}</p>
 		</div>
 	</body>
 </html>
