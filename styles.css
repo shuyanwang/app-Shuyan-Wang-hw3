@@ -1,0 +1,50 @@
+#outer {
+	text-align: center;
+}
+
+#inner {  
+  	border: 3px solid #0D5ACF;
+  	background: #FFECD6;
+  	border-radius: 10px;
+  	margin: auto;
+  	margin-top: 20%;
+  	margin-bottom: 20%;
+  	/*width: 50%;*/
+  	padding: 10px;
+  	display: inline-block;
+}
+
+p.userInput {
+	/*border: 1px solid black;*/
+	color: #0D5ACF;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+input {
+	border: 1px solid #4B7B34;
+}
+
+#buttonWrapper {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+button {
+	border: none;
+	border-radius: 2.5px;
+	background: #0D5ACF;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px; 
+	color: white;
+}
+
+#displayMessage {
+	/*border: 1px solid black;*/
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}

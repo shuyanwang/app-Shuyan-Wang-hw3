@@ -2,14 +2,15 @@
 <html>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 	<script type="text/javascript" src="controller.js"></script>
-	<body>
-		<div ng-app="myApp" ng-controller="myController">
-			<p>First Name<input type="text" ng-model="firstName" placeholder="First Name"></p>
-			<p>Last Name<input type="text" ng-model="lastName" placeholder="Last Name"></p>
-			<p>Email Address<input type="text" ng-model="emailAddress" placeholder="Email Address"></p>
-			<p>Notes<input type="text" ng-model="notes"></p>
-			<button ng-click="register()">Register</button>
-			<p>{{message}}</p>
+	<link rel="stylesheet" href="styles.css">
+	<body id="outer">
+		<div id="inner" ng-app="myApp" ng-controller="myController">
+			<p class="userInput">First Name<input type="text" ng-model="firstName" placeholder="First Name"></p>
+			<p class="userInput">Last Name<input type="text" ng-model="lastName" placeholder="Last Name"></p>
+			<p class="userInput">Email Address<input type="text" ng-model="emailAddress" placeholder="Email Address"></p>
+			<p class="userInput">Notes<input type="text" ng-model="notes"></p>
+			<div id="buttonWrapper"><button id="registerButton" ng-click="register()">Register</button></div>
+			<p id="displayMessage">{{message}}</p>
 		</div>
 	</body>
 </html>
