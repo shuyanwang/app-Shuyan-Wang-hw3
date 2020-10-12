@@ -1,19 +1,25 @@
 var myApp = angular.module('myApp',[]);
 
 myApp.controller('myController', function($scope) {
-  $scope.message = 'Hola!';
+  let displayMessage = document.getElementById("displayMessage")
+
+  let setRegisterErrorMessage = function(fieldName) {
+  	$scope.message = fieldName + ' cannot be empty';
+  	displayMessage.style.color = "red";
+  }
 
   $scope.register = function() {
   	if (!$scope.firstName) {
-  		$scope.message = 'First Name cannot be empty';
+  		setRegisterErrorMessage('First Name')
   	} else if (!$scope.lastName) {
-  		$scope.message = 'Last Name cannot be empty';
+  		setRegisterErrorMessage('Last Name');
   	} else if (!$scope.emailAddress) {
-  		$scope.message = 'Email Address cannot be empty';
+  		setRegisterErrorMessage('Email Address');
   	} else if (!$scope.notes) {
-  		$scope.message = 'Notes cannot be empty';
+  		setRegisterErrorMessage('Notes');
   	} else {
   		$scope.message = 'Validation successful';
+  		displayMessage.style.color = "green";
   	}
   };
 });
